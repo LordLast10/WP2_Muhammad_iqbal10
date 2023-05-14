@@ -1,50 +1,58 @@
 <section>
  <h1><?php echo $judul ?></h1>
- <p align='justify'>Pada pengertian codeigniter di atas 
-tadi di jelaskan bahwa codeigniter menggunakan metode MVC. Apa itu 
-MVC? Kita juga harus mengetahui apa itu MVC sebelum masuk dan lebih 
-jauh dalam belajar codeigniter.</p>
- <p>MVC adalah teknik atau konsep yang memisahkan 
-komponen utama menjadi tiga komponen yaitu model, view dan 
-controller.</p>
- 
- <ol type="a">
- <li>Model</li>
-<p align='justify'>Model adalah kelas yang merepresentasikan atau 
-memodelkan tipe data yang akan digunakan oleh aplikasi. Model juga 
-dapat didefinisakn sebagai bagian penanganan yang berhubungan dengan 
-pengolahan atau manipulasi database. Seperti misalnya mengambil data 
-dari database, menginput dan pengolahan database lainnya. Semua 
-intruksi atau fungsi yang berhubung dengan pengolahan database di 
-letakkan di dalam model. Sebagai contoh, jika ingin membuat aplikasi 
-untuk menghitung luas dan keliling lingkaran, maka dapat memodelkan 
-objek lingkaran sebagai kelas model.</p>
-<p align='justify'>Sebagai catatan, Semua model harus disimpan di 
-dalam folder application\models</p>
-<li>View</li>
-<p align='justify'>View merupakan bagian yang menangani halaman user 
-interface atau halaman yang muncul pada user(pada browser). Tampilan 
-dari user interface di kumpulkan pada view untuk memisahkannya 
-dengan controller dan model sehingga memudahkan web designer dalam 
-melakukan pengembangan tampilan halaman website.</p>
-<li>Controller</li>
-<p align='justify'>Controller merupakan kumpulan intruksi aksi yang 
-menghubungkan model dan view, jadi user tidak akan berhubungan 
-dengan model secara langsung, intinya data yang tersimpan di
-database (model) di ambil oleh controller dan kemudian controller 
-pula yang menampilkan nya ke view. Jadi controller lah yang mengolah 
-intruksi.</p>
-<p align='justify'>Dari penjelasan tentang model view dan controller 
-di atas dapat di simpulkan bahwa controller sebagai penghubung view
-dan model. Misalnya pada aplikasi yang menampilkan data dengan 
-menggunakan metode konsep mvc, controller memanggil intruksi pada 
-model yang mengambil data pada database, kemudian controller yang 
-meneruskannya pada view untuk di tampilkan. Jadi jelas sudah dan 
-sangat mudah dalam pengembangan aplikasi dengan cara mvc ini karena 
-web designer atau front-end developer tidak perlu lagi berhubungan 
-dengan controller, dia hanya perlu berhubungan dengan view untuk 
-mendesign tampilann aplikasi, karena back-end developer yang 
-menangani bagian controller dan modelnya. Jadi pembagian tugas pun 
-menjadi mudah dan pengembangan aplikasi dapat di lakukan dengan
-cepat dan terstruktur.</p>
+ <form method="post" action="v_output.php">
+ <table>
+			<tr>
+		<td><label for="nama_siswa">Nama Siswa		:</label></td>
+		<td><input type="text" name="nama_siswa" id="nama_siswa" required><br></td>
+			</tr>
+			<tr>
+		<td><label for="nis">NIS		:</label></td>
+		<td><input type="text" name="nis" id="nis" required><br></td>
+			</tr>
+			<tr>
+		<td><label for="kelas">Kelas		:</label></td>
+		<td><input type="text" name="kelas" id="kelas" required><br></td>
+			</tr>
+			<tr>
+		<td><label for="tanggal_lahir">Tanggal Lahir		:</label></td>
+		<td><input type="date" name="tanggal_lahir" id="ta
+		nggal_lahir" required><br></td>
+			</tr>
+			<tr>
+		<td><label for="tempat_lahir">Tempat Lahir		:</label></td>
+		<td><input type="text" name="tempat_lahir" id="tempat_lahir" required><br></td>
+			</tr>
+			<tr>
+		<td><label for="alamat">Alamat		:</label></td>
+		<td><textarea name="alamat" id="alamat" required></textarea><br></td>
+			</tr>
+			<tr>
+		<td><label for="jenis_kelamin">Jenis Kelamin		:</label><br></td>
+			</tr>
+			<tr>
+		<td><input type="radio" name="jenis_kelamin" id="laki_laki" value="Laki-laki" required></td>
+		<td><label for="laki_laki">Laki-laki</label><br></td>
+			</tr>
+			<tr>
+		<td><input type="radio" name="jenis_kelamin" id="perempuan" value="Perempuan" required></td>
+		<td><label for="perempuan">Perempuan</label><br></td>
+			</tr>
+			<tr>
+		<td><label for="agama">Agama		:</label></td>
+		<td><select name="agama" id="agama" required>
+			<option value="">-- Pilih Agama --</option>
+			<option value="Islam">Islam</option>
+			<option value="Kristen">Kristen</option>
+			<option value="Katolik">Katolik</option>
+			<option value="Budha">Budha</option>
+			<option value="Hindu">Hindu</option>
+			<option value="Protestan">Protestan</option>
+			<option value="Khonghucu">Khonghucu</option>
+		</select><br></td>
+		</tr>
+		<tr>
+		<td><input type="submit" value="Simpan"></td>
+</tr>
+</table>
  </section>
